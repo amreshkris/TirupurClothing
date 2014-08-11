@@ -16,7 +16,7 @@
 
     <!-- Custom CSS -->
     <link href="css/scrolling-nav.css" rel="stylesheet">
-    <link href="css/blue-glass/sidebar.css" rel="stylesheet">
+    <link href="css/slideimg/bootstrap-dialog.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -34,6 +34,19 @@
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
     <!-- Navigation -->
+
+    <div id="sticker" class="vertical" style="cursor:pointer">        
+        <table class="tab">
+        <tr><td>G</td></tr>
+        <tr><td>E</td></tr>
+        <tr><td>T</td></tr>
+        <tr><td>Q</td></tr>
+        <tr><td>U</td></tr>
+        <tr><td>O</td></tr>
+        <tr><td>T</td></tr>
+        <tr><td>E</td></tr>
+        </table>
+    </div>   
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header page-scroll">
@@ -73,11 +86,10 @@
         </div>
         <!-- /.container -->
     </nav>
-    <ul id="demo_menu1">
-        <li><a href="/">Get Free Quote</a></li>
-    </ul>
-    <!-- Intro Section -->
-    <div class="container marketing">
+    
+    <!-- Intro Section -->  
+   
+    <div id="main" class="container marketing">         
     <section id="intro" class="intro-section">
         <div class="container">
             <div class="row">
@@ -131,6 +143,7 @@
             </div>
         </div>
     </section>
+
 
     <!-- About Section -->   
     <section id="about" class="about-section">
@@ -260,12 +273,17 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>Contact Section</h1>
+                   <div id="slider">
+                        <button type="button" class="btn-custom" onclick="quoteClick()">Get Quote</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </section>      
     </div>
+    
+  
+   
 
    
 
@@ -276,37 +294,62 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery-sidebar.js"></script>
+    
 
     <!-- Scrolling Nav JavaScript -->
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/scrolling-nav.js"></script>
-    <script src="js/holder.js"></script>
+    <script src="js/slideimg/bootstrap-dialog.js"></script>
+   
+
     <script type="text/javascript">
-    $(function ($) {
-            //$("ul#demo_menu1").sidebar();
-            $("ul#demo_menu1").sidebar({
-                position:"right",
-                callback:{
-                    item : {
-                        enter : function(){                           
-                            $(this).find("a").animate({color:"red"});
-                        },
-                        leave : function(){                           
-                            $(this).find("a").animate({color:"white"});
-                        }
-                    }
-                },
-                animate : {
-                    container : {
-                        enter : {},
-                        leave : {}
-                    }
-                },
-                duration : 200,
-                open : "mouseenter.sidebar",
-                close : "mouseleave.sidebar"
+     function quoteClick()
+            {
+               BootstrapDialog.show({               
+                    type: BootstrapDialog.TYPE_DANGER,
+                    title: 'Happy to help you',
+                    size: BootstrapDialog.SIZE_LARGE,
+                    closable: true,
+                    closeByBackdrop: false,
+                    closeByKeyboard: false,
+                    message:'<input type="text" class="form-control" placeholder="Name"><br/><input type="email" class="form-control" id="inputEmail" placeholder="Email"><br/><input type="text" class="form-control" placeholder="City"><br/><input type="text" class="form-control" placeholder="Phone"><br/><div class="dropdown"><button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">Products<span class="caret"></span></button><ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1"><li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li></ul></div><br/><input type="text" class="form-control" placeholder="Order Quantity">',
+                    buttons:[
+                                {
+                                    label: 'Cancel',
+                                    cssClass: 'btn btn-primary btn-sm',
+                                    action: function(dialog){
+                                        dialog.close();
+                                    }
+                                },
+                                {
+                                    label: 'Contact me',
+                                    cssClass: 'btn btn-success btn-sm',
+                                    action: function(dialog){
+                                        dialog.close();
+                                    }
+                                }
+                            ]
+               });
+            }
+    $(function ($) { 
+
+            $( "#sticker" ).click(function() {
+                quoteClick();
             });
+
+            var top = $('#sticker').offset().top;
+            if(top === 0){
+                $('#sticker').addClass('fixed');
+            }
+            $(window).scroll(function (event) {
+                var y = $(this).scrollTop();                
+                if (y >= top)
+                    $('#sticker').addClass('fixed');
+                else
+                $('#sticker').removeClass('fixed');
+                //$('#sticker').width($('#sticker').parent().width());
+            });
+
             $('#carousel1').carousel({
                 interval: 5000
             });
@@ -329,6 +372,7 @@
                 }
             clickEvent = false;
             });
+            
     });
 </script>
 </body>
