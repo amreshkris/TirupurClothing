@@ -27,6 +27,16 @@ html {
     }
 }
 
+@media (min-width : 1200px) {
+  .container{
+      width: auto;
+  }
+}
+
+.list-group-item{
+  border: 0px;
+}
+
 /* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
 The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children 
 of those sections to manage the look and feel of the site. */
@@ -59,6 +69,14 @@ of those sections to manage the look and feel of the site. */
     text-align: center;
     background: #fff;
 }
+
+.quote-section {
+    height: 100%;
+    padding-top: 50px;
+    text-align: center;
+    background: #fff;
+}
+
 
 .location-section {
     height: 100%;
@@ -136,3 +154,86 @@ of those sections to manage the look and feel of the site. */
   z-index:99;
 }
 
+.row { margin: 0; padding: 0 }
+
+
+@media (min-device-width : 320px) (max-device-width : 480px) {
+.container{
+      width: auto;
+  }
+}
+ 
+/* Smartphones (landscape) ----------- */
+@media only screen  and (min-width : 321px) {
+.container{
+      width: auto;
+  } 
+}
+ 
+/* Smartphones (portrait) ----------- */
+@media only screenand (max-width : 320px) {
+.container{
+      width: auto;
+  }
+}
+ 
+@media only screen and (min-device-width : 768px)  and (max-device-width : 1024px) {
+.container{
+      width: auto;
+  }
+}
+ 
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+.container{
+      width: auto;
+  }  
+}
+ 
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px)and (orientation : portrait) {
+.container{
+      width: auto;
+  }
+}
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) {
+.container{
+      width: auto;
+  }
+}
+ 
+/* iPhone 5 (portrait & landscape)----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
+.container{
+      width: auto;
+  }
+}
+ 
+/* iPhone 5 (landscape)----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape) {
+.container{
+      width: auto;
+  }
+}
+ 
+/* iPhone 5 (portrait)----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : portrait) {
+.container{
+      width: auto;
+  }
+}
+
+.thumbnail.right-caption > img {
+    float: left;
+    margin-right: 9px;
+}
+
+.thumbnail.right-caption {
+    float: left;
+}
+
+.thumbnail.right-caption > .caption {
+    padding: 4px;
+}
+​

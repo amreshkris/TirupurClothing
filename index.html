@@ -92,56 +92,12 @@
     
     <!-- Intro Section -->  
    
-    <div id="main" class="container marketing">         
+    <div id="main" class="container marketing" style="margin-left:0px;margin-right:0px;padding-left:0px;padding-right:0px">       
     <section id="intro" class="intro-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                   <div class="container">
-                        <div id="carousel1" class="carousel slide" data-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="item active">
-                                    <img alt="Bootstrap template" src="http://placehold.it/1200x400/b4d9a7/ffffff&text=India&#8217s Leading T-Shirt Manufacturer">
-                                        <div class="carousel-caption">
-                                        <h3>Company information</h3>
-                                        <p>
-                                        Discover and rebuild yourself, your personality, and your company with the way you look with our help to change according to your requirements with our everlasting evergreen any season any purpose collections.
-                                        </p>
-                                        </div>
-                                </div>
-                                <div class="item">
-                                <img alt="Bootstrap template" src="http://placehold.it/1200x400/4f77cb/ffffff&text=Products">
-                                    <div class="carousel-caption">
-                                        <p>
-                                            Our wide range of products include Round Neck T-Shirts,Polo T-Shirts,Sweat Shirts,Hoodies & Zipper and Dry Fit T-Shirts and much more.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                <img alt="Bootstrap template" src="http://placehold.it/1200x400/d11e4f/ffffff&text=Services">
-                                    <div class="carousel-caption">
-                                    <h3>Portfolio</h3>
-                                    <p>
-                                    This is a list of some of the work done by the company over the past quarter. 
-                                    </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="custom">
-                            <ul class="nav nav-pills nav-justified">
-                                <li data-target="#carousel1" data-slide-to="0" class="active">
-                                <a href="#">Who We are</a>
-                                </li>
-                                <li data-target="#carousel1" data-slide-to="1">
-                                <a href="#">What we do</a>
-                                </li>
-                                <li data-target="#carousel1" data-slide-to="2">
-                                <a href="#">What we offer</a>
-                                </li>
-                            </ul>
-                            </div>
-                        </div>
-                    </div>
+                  
                 </div>
             </div>
         </div>
@@ -149,7 +105,7 @@
 
 
     <!-- About Section -->   
-    <section id="about" class="about-section">
+    <section id="about" class="about-section" style="background-color:#E8E8E8">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -206,7 +162,7 @@
     </section>
 
     <!-- Products -->
-    <section id="products" class="product-section">
+    <section id="products" class="product-section" >
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -271,10 +227,64 @@
         </div>        
     </section>
 
+    <section id="quote" class="quote-section">
+        <div class="container">
+            <div class="row"> 
+                <div class="col-md-2">  
+                </div>
+                 <div class="col-md-8"> 
+                        <ul id="lstquote" class="list-inline">
+                        <li class="list-group-item"><button style="width:150px" class="btn btn-danger btn-block" onClick="LoadItem(event,'R')">Round Neck T-Shirt</button></li>
+                        <li class="list-group-item"><button style="width:150px"  class="btn btn-danger btn-block" onClick="LoadItem(event,'C')">Corporate T-Shirt</button></li>        
+                        <li class="list-group-item"><button style="width:150px"  class="btn btn-danger btn-block" onClick="LoadItem(event,'P')">Polo T-Shirt</button></li>
+                        <li class="list-group-item"><button style="width:150px"  class="btn btn-danger btn-block" onClick="LoadItem(event,'D')">Dry Fit T-Shirt</button></li>
+                        </ul>
+                </div>
+            </div>
+            <br/>
+            <br/>
+            <div class="row"> 
+                <div class="row featurette">
+                    <div class="col-md-2">  
+                    </div>
+                    <div class="col-md-3">                                
+                                <img id="itemImage" class="featurette-image img-responsive"  alt="200x200" src="images/Products-round.jpg">
+                    </div>
+                    <div class="col-md-7">
+                                <h2 id="itemTitle" class="featurette-heading" style="text-align:left">Round Neck T-Shirt</h2>
+                                <p style="text-align:left" id="itemText" class="lead">We have the best quality textiles ranging from cotton, polymers, nylon, wool and much more. Adding to these, our design is made keeping in mind the vision of your company and the purpose of the event.</p>
+                                <p></p>
+                                <div  style="text-align:left" class="form-inline">
+                                <input id='qty' type="number" style="width:100px" class="form-control" placeholder="Quantity">
+                                <button class="btn btn-success btn-small" onClick="AddtoQuote()">Get Quote</button>
+                                </div>
+                    </div>                            
+                </div>                
+            </div>
+            <br/>
+            <br/>
+            <hr>
+            <div class="row"> 
+                <div class="col-md-2">  
+                </div>
+                 <div class="col-md-8"> 
+                         <div id="quotetable" class="table-responsive">
+                             <table border="0" class="table table-striped table-hover table-bordered">
+                                <tr>
+                                    <td> Item </td>
+                                    <td> Quantity </td>
+                                    <td> Price </td>
+                                </tr>
+                             </table>
+                         </div>
+                </div>
+            </div>           
+        </div>        
+    </section>
+
     <!-- Location -->
     <section id="location" class="location-section">
-        <div class="container-fluid">
-            <h1>Location</h1>
+        <div class="container-fluid">           
             <div style="position: relative; padding-bottom: 56.25%; /* 16:9 */padding-top: 25px;height: 0; border:0"> 
                 <iframe frameborder="0" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%; broder:0" src="https://www.google.com/maps/embed/v1/place?q=Hype%2C%20Khadarpet%2C%20Tirupur%2C%20Tamil%20Nadu%2C%20India&key=AIzaSyDWSQhEGaFYgStH-mdh8Ly-FA-7LtzxS5I">
                 </iframe>
@@ -347,8 +357,9 @@
                             ]
                });
             }
+             
     $(function ($) { 
-
+          
             $( "#sticker" ).click(function() {
                 quoteClick();
             });
@@ -371,26 +382,79 @@
             });
 
             var clickEvent = false;
+            /*
+            var x = $('#lstquote'); // this is your element
+            var w = $(window).width();
+            if(w <= 900) {
+                x.removeClass('list-inline').addClass('list-group');
+            }
+            if(w > 900) {
+                x.removeClass('list-group').addClass('list-inline');
+            }*/
+    }); 
+    var itemID ="R";
+    AddtoQuote = function(){ 
+                var itm ="";
+                var itmqty = 0;
+                var itmprice = 0;   
+                switch(itemID){
+                    case 'R':
+                                itm = 'Round Neck T-Shirt';
+                                itmqty = $('#qty').val();
+                                itmprice = 100 * itmqty;
+                                break;
+                    case 'C':
+                                itm = 'Corporate T-Shirt';
+                                itmqty = $('#qty').val();
+                                itmprice = 110 * itmqty;
+                                break;
+                    case 'P':
+                                itm = 'Polo T-Shirt';
+                                itmqty = $('#qty').val();
+                                itmprice = 120 * itmqty;
+                                break;
+                    case 'D':
+                                itm = 'Dry Fit T-Shirt';
+                                itmqty = $('#qty').val();
+                                itmprice = 130 * itmqty;
+                                break;
 
-            $('#carousel1').on('click', '.custom .nav a', function () {
-                clickEvent = true;
-                $('.custom .nav li').removeClass('active');
-                $(this).parent().addClass('active');
-            }).on('slid.bs.carousel', function (e) {
-                if (!clickEvent) {
-                    var count = $('.custom .nav').children().length - 1;
-                    var current = $('.custom .nav li.active');
-                    current.removeClass('active').next().addClass('active');
-                    var id = parseInt(current.data('slide-to'));
-                    if (count == id) {
-                        $('.custom .nav li').first().addClass('active');
-                    }
+
                 }
-            clickEvent = false;
-            });
-            
-    });
+                $('table tr:last').after("<tr id='newrow'><td>" + itm +"</td><td>" + itmqty + "</td><td>"+ itmprice +"</td></td><td class='deleterow'><div id='row' onClick='Removerow(event)'class='glyphicon glyphicon-remove'></div></td></tr>");
+                };
+ 
+    Removerow = function(event){
+                    event.preventDefault();                
+                    $('#row').closest('#newrow').remove();                                 
+                }
+
+    LoadItem = function(event,itemType){
+        event.preventDefault();  
+        switch(itemType)
+        {
+            case 'R' : 
+                        $('#itemImage').attr('src','images/Products-round.jpg');
+                        $('#itemTitle').text('Round Neck T-Shirt');
+                        itemID = 'R';
+                        break;
+            case 'C' : 
+                        $('#itemImage').attr('src','images/Products-custom.jpg');
+                        $('#itemTitle').text('Corporate T-Shirt');
+                        itemID = 'C';
+                        break;
+            case 'P' :  
+                        $('#itemImage').attr('src','images/Products-polo.jpg');
+                        $('#itemTitle').text('Polo T-Shirt');
+                        itemID = 'P';
+                        break;
+            case 'D' : 
+                        $('#itemImage').attr('src','images/Products-dry.jpg');
+                        $('#itemTitle').text('Dry Fit T-Shirt');
+                        itemID = 'D';
+                        break;
+        }
+    }
 </script>
 </body>
-
 </html>
